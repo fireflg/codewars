@@ -7,7 +7,7 @@ def wallpaper(l, w, h):
             15: 'fifteen', 16: 'sixteen', 17: 'seventeen', 18: 'eighteen', 19: 'nineteen', 20: 'twenty'}
     if all(x == 0 for x in (l, w, h)) :
         return "zero"
-    summary = ((l * h * 2 + w * h * 2) * 1.15 / 5.2)
+    summary = (2 * (l + w) * h / 5.2 * 1.15)
     summary = ceil(summary)
     if summary>0:
         return num2words1[summary]
